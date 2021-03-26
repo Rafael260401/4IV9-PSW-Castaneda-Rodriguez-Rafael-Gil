@@ -1,0 +1,53 @@
+@keyframes animation_test{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: rgb(22, 33, 187);
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    color: black;
+    text-align: center;
+}
+
+.main-container{
+    border: 5px solid rgb(99, 4, 4);
+    border-radius: 10px;
+    margin: 2rem;
+    background-color: transparent;
+
+}
+
+nav, section, footer, article, aside{
+    border: 2px solid rgb(99, 4, 4);
+    margin: 1rem;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+aside, article{ 
+    width: 40%;
+    display:inline-block;
+    height: 150px;
+    background-color: transparent;
+}
+
+body
+{
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    height: 1000px;
+    justify-content: center;
+    
+    align-items: center;
+    animation-name: animation_test;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
