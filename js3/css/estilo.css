@@ -1,0 +1,219 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container-main{
+    background-color: rgba(250, 247, 69, 0.767);
+    margin-left: 280px;
+    width: 100%;
+    height: 97%;
+    position: absolute;
+}
+
+h2{
+    color: rgb(27, 214, 58);
+    font-size: 55px;
+    margin-left: 120px;
+}
+
+.formulario{
+    background-color: rgb(241, 225, 78);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    width: 70%;
+    margin-left: 120px;
+}
+
+.box{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 32px;
+    align-items: center;
+}
+
+.prueba{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(94, 255, 0);
+}
+
+.text-form{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    background-color: rgb(190, 230, 115);
+    padding: 10px 15px;
+}
+
+.box-input{
+    background-color: rgb(255, 255, 255);
+    margin: 16px;
+}
+
+.input-evy{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+}
+
+.data{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    background-color: rgb(190, 230, 115);
+    padding: 10px 15px;
+    border: none;
+    transition: 0.3s;
+}
+
+.data:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.menu{
+    background-color: rgb(73, 165, 65);
+    color: white;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    margin-top: -32px;
+}
+
+ul{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-left: -30px;
+}
+
+li{
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+li:hover{
+    background-color: rgb(73, 165, 65);
+    transform: scale(1.05, 1.05);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.content{
+    background-color: rgb(179, 255, 0);
+    margin-left: 280px;
+    width: 100%;
+    height: 97%;
+    position: absolute;
+}
+
+.input{
+    font-size: 24px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+form{
+    background-color: rgb(179, 255, 0);
+    border-radius: 4px;
+    padding: 32px;
+}
+
+form input{
+    border: none;
+}
+
+.campo{
+    width: 600px;
+    color: black;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.btn-inversion{
+    font-size: 35px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-inversion:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.content-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.verInversion{
+    width: 700px;
+    height: 30px;
+    color: black;
+    font-size: 22px;
+}
+input#abrir-cerrar { visibility:hidden; position: absolute; top: -9999px; }
+input#abrir-cerrar:checked ~ #sidebar {
+    width:300px;
+}
+input#abrir-cerrar:checked + label[for="abrir-cerrar"], input#abrir-cerrar:checked ~ #contenido {
+    margin-left:300px;
+    transition: margin-left .4s;
+}
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .cerrar { 
+    display:inline;
+}
+input#abrir-cerrar:checked + label[for="abrir-cerrar"] .abrir {
+    display:none;
+}
+
+#activar {
+    display: none;
+}
+.inputlabel {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 10px;
+    background-color: rgb(73, 165, 65);
+    color: #fff;
+}
+#activar ~ .inputlabel:before {
+    content: "ABRIR"
+}
+#activar ~ .desplegable {
+    display: none;
+    overflow: hidden;
+    padding: 10px 20px; 
+    background-color:rgb(73, 165, 65);
+    color: #fff;
+}
+#activar:checked ~ .desplegable {
+    display: block;
+}
+#activar:checked ~ .inputlabel:before {
+    content: "CERRAR"}
