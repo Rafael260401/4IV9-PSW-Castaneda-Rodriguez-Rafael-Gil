@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro de Usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='main.js'></script>
+        <link rel="stylesheet" href="estilo.css">
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>  
+        <script src="https://kit.fontawesome.com/9fb0a1aa63.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>        
+        <h1>Hola, llena estos datos por favor c: </h1>
+        <div class="container" >
+            <div class="contenedorRegistro" >
+                <form method="post" name="formulario" 
+                      action="Registro">
+                    <label>Nombre: </label>
+                    <br>
+                    <input onkeypress="return validarLetras(event)" type="text" name = "nombre" class="formulario__input" placeholder="Nombre">
+                    <br>
+                    <label>Apellido Paterno: </label>
+                    <br>
+                    <input type="text" onkeypress="return validarLetras(event)" name = "appat" class="formulario__input" placeholder="Apellido paterno">
+                    <br>
+                    <label>Apellido Materno: </label>
+                    <br>
+                    <input type="text" onkeypress="return validarLetras(event)" name = "apmat" class="formulario__input" placeholder="Apellido materno">
+                    <br>
+                    <label>Edad: </label>
+                    <br>
+                    <input type="text" onkeypress="return validarNumeros(event)" name = "edad" class="formulario__input" placeholder="Edad">
+                    <br>
+                    <label>Email: </label>
+                    <br>
+                    <input type="email" onkeypress="return validarAlfaNumericos(event)" name = "correo" class="formulario__input" placeholder="Correo">
+                    <br>
+                    <input type="submit" value="Registrar Usuario" >
+                    <input type="reset" value="Borrar Datos" > 
+                </form>
+            </div>
+                <br>
+                
+            <div class="contenedorConsultar" >
+                <br>
+                <form name="formularioConsultar" method="get" action="Consultar">
+                    <input type="submit" value="Consultar Tabla General de Usuarios" >
+                </form>
+            </div>
+                
+                <br>
+                <div class="contenedorEliminar" >
+                    <br>
+                <form name="formularioEliminar" method="post" action="Eliminar">
+                    <label>Ingresa el ID del usuario a eliminar</label>
+                    <input type="text" name="ideliminar" >
+                    <input type="submit" value="Eliminar Registro" >
+                </form>
+                </div>
+                <br>
+                
+            <div class="contenedorActualizar" >
+                     <form name="formularioEliminar" method="post" action="Actualizar">
+                        
+                        <label>Ingrese el ID del Usuario a modificar</label>
+                        <input type="text" name="idmodificar" >
+                       <input type="submit" value="Modificar Registro">
+                       </form>
+                </div>
+        </div>
+    </body>
+</html>
